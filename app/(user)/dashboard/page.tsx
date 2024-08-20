@@ -28,7 +28,7 @@ const Dashboard = async () => {
           <NewProject />
         ) : null}
       </div>
-      {subscribed ? <ProjectList projects={userProjects} /> : null}
+      <ProjectList projects={userProjects} subscribed={subscribed} />
     </div>
   );
 };

@@ -46,10 +46,10 @@ const page = async ({ params }: { params: { projectId: string } }) => {
         <h1 className='text-3xl font-bold mb-3'>{project.name}</h1>
         <p className='text-slate-700 mb-4'>{project.description}</p>
         {project.url ? (
-          <Link href={project.url} className='flex underline items-center mb-2'>
+          <a href={project.url} className='flex underline items-center mb-2'>
             <Globe className='h-5 w-5 mr-2' />
             <span>Visit Site</span>
-          </Link>
+          </a>
         ) : null}
         <Link
           href={`/projects/${params.projectId}/instructions`}
