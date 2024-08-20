@@ -1,13 +1,13 @@
 import SubmitButton from '@/components/submit-button';
 import React from 'react';
-import { monthlyPlaId, yearlyPlanId } from '@/lib/payment';
+import { monthlyPlanId, yearlyPlanId } from '@/lib/payment';
 import SubscribeButton from '../subscribe-button';
 
 const page = ({ searchParams }: { searchParams: { plan: string } }) => {
   const { plan } = searchParams;
   console.log(plan);
 
-  const planId = plan === 'yearly' ? yearlyPlanId : monthlyPlaId;
+  const planId = plan === 'yearly' ? yearlyPlanId : monthlyPlanId;
 
   return (
     <div className='flex flex-col border p-4 rounded-md'>
